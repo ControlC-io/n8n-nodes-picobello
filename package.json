@@ -16,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jose99segura/n8n-nodes-picobello.git"
+		"url": "https://github.com/ControlC-io/n8n-nodes-picobello.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
