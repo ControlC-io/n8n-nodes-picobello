@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-picobello",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Productivity", "Utility"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://picobello.app/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://picobello.app/"
+			}
+		]
+	}
+}

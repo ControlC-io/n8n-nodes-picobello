@@ -1,24 +1,29 @@
 {
-	"name": "n8n-nodes-<...>",
+	"name": "n8n-nodes-picobello",
 	"version": "0.1.0",
-	"description": "",
+	"description": "n8n community node for Picobello workflow automation",
 	"license": "MIT",
-	"homepage": "",
+	"homepage": "https://picobello.app",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"picobello",
+		"workflow",
+		"automation"
 	],
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "ControlC",
+		"email": "jose.segura@controlc.io"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "https://github.com/jose99segura/n8n-nodes-picobello.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
 		"build:watch": "tsc --watch",
-		"dev": "n8n-node dev",
+		"dev": "n8n-node dev --external-n8n",
+		"dev:docker": "docker compose up",
+		"dev:n8n": "n8n start",
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
 		"release": "n8n-node release",
@@ -31,12 +36,10 @@
 		"n8nNodesApiVersion": 1,
 		"strict": true,
 		"credentials": [
-			"dist/credentials/GithubIssuesApi.credentials.js",
-			"dist/credentials/GithubIssuesOAuth2Api.credentials.js"
+			"dist/credentials/PicobelloApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js"
+			"dist/nodes/Picobello/Picobello.node.js"
 		]
 	},
 	"devDependencies": {
