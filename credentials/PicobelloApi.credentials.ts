@@ -11,7 +11,7 @@ export class PicobelloApi implements ICredentialType {
 
 	displayName = 'Picobello API';
 
-	icon: Icon = 'file:../nodes/Picobello/picobello.png';
+	icon: Icon = 'file:../nodes/Picobello/picobello.svg';
 
 	documentationUrl = 'https://go.picobello.app/';
 

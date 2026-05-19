@@ -24,7 +24,7 @@ export class Picobello implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Picobello',
 		name: 'picobello',
-		icon: 'file:picobello.png',
+		icon: 'file:picobello.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
