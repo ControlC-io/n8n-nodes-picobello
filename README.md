@@ -53,9 +53,37 @@ The **Make Decision** operation also accepts optional `Reason` and `Comment` fie
 
 ## Development
 
+### Setup
+
 ```bash
 npm install
-npm run dev       # start n8n locally with this node hot-loaded
+```
+
+### Running locally (two terminals)
+
+`npm run dev` only compiles and links the node in watch mode (it uses `n8n-node dev --external-n8n`, which intentionally does **not** start n8n). You need a second terminal running n8n so it can load the compiled node from `dist/`.
+
+**Terminal 1 — watch & rebuild the node:**
+
+```bash
+npm run dev
+```
+
+**Terminal 2 — start n8n (pick one):**
+
+```bash
+npm run dev:docker   # recommended: runs n8n in Docker on http://127.0.0.1:5680
+# or
+npm run dev:n8n      # runs `n8n start` directly (requires n8n installed globally)
+```
+
+Open the n8n editor, create a **Picobello API** credential, and add the **Picobello** node to a workflow.
+
+> **Docker option:** `docker-compose.yml` mounts `./dist` into the container as a custom extension, so every recompile from Terminal 1 is picked up. After saving a `.ts` file, reload the n8n editor tab to see the changes. To reset the n8n database, run `docker compose down -v`.
+
+### Other scripts
+
+```bash
 npm run build     # compile TypeScript to dist/
 npm run lint      # run ESLint
 npm run lint:fix  # auto-fix lint issues
